@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # Tic Tac Toe
 
 # global constants
