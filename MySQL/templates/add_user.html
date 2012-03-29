@@ -1,0 +1,41 @@
+<style>
+    #outer {align: center}
+    #inner {align: center; margin: 0 auto; width:575px}
+</style>
+<div id="outer">
+<div id="inner">
+<form action="/add_user/" method="post">
+<table align="left">
+    <tr>
+        <td>First:</td>
+        <td><input type="text" name="first" /></td>
+    </tr>
+    <tr>
+        <td>Last:</td>
+        <td><input type="text" name="last" /></td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td><input type="text" name="email" /></td>
+    </tr>
+    <tr>
+        <td><input type ="submit" name="btn" value="Add User" /></td>
+        <td><input type ="submit" name="btn" value="Remove User" /></td>
+    </tr>
+</table>
+<table cellpadding="5" border="2" align="right">
+    <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>Email</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user[0] }}</td>
+        <td>{{ user[1] }}</td>
+        <td>{{ user[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+</div>
